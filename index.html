@@ -1,39 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
 
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- manrope google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- font awesome -->
-   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <!-- tailwind custom color -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'gradient-start': '#FF8938',
-                        'gradient-end': '#F00',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#F85559",
+              "gradient-end": "#F00",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .font-lato {
-            font-family: 'Lato', sans-serif;
-        }
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+      .bg-img{
+        background-image: url("./images/banner1.png");
+        opacity: 90%;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="p-4">
+    <header class="container mx-auto">
+      <!-- Nav Bar -->
+      <div
+        class="navbar bg-base-100 container mx-auto bg-primary-color rounded-full m-12 text-white"
+      >
+        <div class="navbar-start">
+          <div class="dropdown lg:hidden">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center gap-4">
+          <img src="./images/logo.png" alt="logo" />
+          <p class="normal-case text-2xl font-bold">Fruit Burst</p>
+        </div>
+        <div class="navbar-end"></div>
+      </div>
+
+      <!-- Banner Slider -->
+      <div class="carousel w-full h-96 lg:h-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            class="relative bg-black opacity-30 w-full"
+            src="./images/banner1.png"
+          />
+          <div
+            class="w-full h-full absolute text-center text-white rounded-lg space-y-4 lg:space-y-7"
+          >
+            <h1 class="font-extrabold text-4xl items-center mt-32 lg:text-7xl">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p>We supply highly quality organic products</p>
+            <button class="p-4 bg-primary-color rounded-lg" type="submit">
+              Shop now
+            </button>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            class="relative bg-black opacity-30 w-full"
+            src="./images/banner2.png"
+          />
+          <div
+            class="w-full h-full absolute text-center text-white rounded-lg space-y-4 lg:space-y-7"
+          >
+            <h1 class="font-extrabold text-4xl mt-32 lg:text-7xl">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p>We supply highly quality organic products</p>
+            <button class="p-4 bg-primary-color rounded-lg" type="submit">
+              Shop now
+            </button>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            class="relative bg-black opacity-30 w-full"
+            src="./images/banner3.png"
+          />
+          <div
+            class="w-full h-full absolute text-center text-white rounded-lg space-y-4 lg:space-y-7"
+          >
+            <h1 class="font-extrabold text-4xl mt-32 lg:text-7xl">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p>We supply highly quality organic products</p>
+            <button class="p-4 bg-primary-color rounded-lg" type="submit">
+              Shop now
+            </button>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img
+            class="relative bg-black opacity-30 w-full"
+            src="./images/banner4.png"
+          />
+          <div
+            class="w-full h-full absolute text-center text-white rounded-lg space-y-4 lg:space-y-7"
+          >
+            <h1 class="font-extrabold text-4xl mt-32 lg:text-7xl">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p>We supply highly quality organic products</p>
+            <button class="p-4 bg-primary-color rounded-lg" type="submit">
+              Shop now
+            </button>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus section -->
+      <div
+        class="hidden md:hidden lg:grid grid-cols-5 items-center w-10/12 mx-auto bg-white rounded-xl py-8 relative -top-28"
+      >
+        <div class="mx-auto"><img src="./images/fruit1.png" alt="" /></div>
+        <div class="mx-auto"><img src="./images/fruit2.png" alt="" /></div>
+        <div class="mx-auto"><img src="./images/fruit3.png" alt="" /></div>
+        <div class="mx-auto"><img src="./images/fruit4.png" alt="" /></div>
+        <div class="mx-auto"><img src="./images/fruit5.png" alt="" /></div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <!-- Deal Section -->
+      <section></section>
+
+      <!-- Team Section -->
+      <section
+        class="w-full bg-no-repeat bg-cover p-4 rounded-xl bg-img"
+      >
+      <div class=" text-white flex flex-col w-full text-center space-y-7 mb-5 lg:mb-40">
+          <h3 class="text-5xl font-extrabold mt-24 lg:mt-40 ">Meet the team section</h3>
+          <p class="lg:w-1/2 mx-auto">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-10/12 mx-auto">
+          <div class="mx-auto">
+            <img class="mb-8" src="./images/member1.png" alt="" />
+            <h6 class="text-xl font-bold">Awlad Hossain</h6>
+            <p>Fruits Expert</p>
+            <div class="flex flex-row justify-center gap-3 text-primary-color text-xl mt-2"> 
+              <a href="#" ><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="border-0"> <i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="mx-auto">
+            <img class="mb-8" src="./images/member2.png" alt="" />
+            <h6 class="text-xl font-bold">Safia Chowdhury</h6>
+            <p>Fruits Expert</p>
+            <div class="flex flex-row justify-center gap-3 text-primary-color text-xl mt-2"> 
+              <a href="#" ><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="border-0"> <i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="mx-auto">
+            <img class="mb-8" src="./images/member3.png" alt="" />
+            <h6 class="text-xl font-bold">Rokib Hossain</h6>
+            <p>Fruits Expert</p>
+            <div class="flex flex-row justify-center gap-3 text-primary-color text-xl mt-2"> 
+              <a href="#" ><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="border-0"> <i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="mx-auto">
+            <img class="mb-8" src="./images/member4.png" alt="" />
+            <h6 class="text-xl font-bold">Chaity</h6>
+            <p>Fruits Expert</p>
+            <div class="flex flex-row justify-center gap-3 text-primary-color text-xl mt-2"> 
+              <a href="#" ><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="border-0"> <i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        
+      <!-- Why Choose us -->
+      <section></section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
