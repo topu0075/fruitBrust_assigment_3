@@ -54,9 +54,17 @@
     <header class="container mx-auto p-4">
       <!-- Nav Bar -->
       <div
-        class="navbar bg-base-100 container mx-auto bg-primary-color rounded-full my-5 lg:my-12 text-white"
+        class="navbar flex flex-row-reverse lg:flex-row justify-center items-center container mx-auto bg-white lg:bg-primary-color rounded-full my-5 lg:my-12 text-secondary-color lg:text-white"
       >
-        <div class="navbar-start">
+        <div class="navbar-end lg:justify-start">
+          <div class="hidden lg:flex">
+            <ul class="flex flex-wrap gap-5 pl-12">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">All Fruits</a></li>
+            </ul>
+          </div>
           <div class="dropdown lg:hidden">
             <label tabindex="0" class="btn btn-ghost btn-circle">
               <svg
@@ -76,26 +84,34 @@
             </label>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box relative -ml-20 px-5 bg-white"
             >
-              <li><a>Homepage</a></li>
-              <li><a>Portfolio</a></li>
-              <li><a>About</a></li>
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
             </ul>
           </div>
         </div>
-        <div class="navbar-center gap-4">
+        <div class="navbar-start lg:justify-center gap-4 w-3/4 ">
           <img src="./images/logo.png" alt="logo" />
           <p class="normal-case text-2xl font-bold">Fruit Burst</p>
         </div>
-        <div class="navbar-end"></div>
+        <div class="hidden lg:flex navbar-end pr-5">
+          <div class="flex-none gap-2">
+            <div class="form-control flex flex-row items-center bg-white rounded-full px-5">
+              <input type="text" placeholder="Search Here" class="input w-48 bg-white rounded-full focus:outline-none text-secondary-color" />
+              <i class="fa-solid fa-magnifying-glass text-secondary-color"></i>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Banner Slider -->
-      <div class="carousel w-full h-96 lg:h-full">
-        <div id="slide1" class="carousel-item relative w-full">
+      <div class="carousel w-full h-96 lg:h-full rounded-xl">
+        <div id="slide1" class="carousel-item relative w-full bg-black">
           <img
-            class="relative bg-black opacity-80 w-full"
+            class="relative opacity-50 w-full"
             src="./images/banner1.png"
           />
           <div
@@ -117,7 +133,7 @@
             <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
+        <div id="slide2" class="carousel-item relative w-full bg-black">
           <img
             class="relative bg-black opacity-80 w-full"
             src="./images/banner2.png"
@@ -141,7 +157,7 @@
             <a href="#slide3" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide3" class="carousel-item relative w-full">
+        <div id="slide3" class="carousel-item relative w-full bg-black">
           <img
             class="relative bg-black opacity-80 w-full"
             src="./images/banner3.png"
@@ -165,7 +181,7 @@
             <a href="#slide4" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide4" class="carousel-item relative w-full">
+        <div id="slide4" class="carousel-item relative w-full bg-black">
           <img
             class="relative bg-black opacity-80 w-full"
             src="./images/banner4.png"
@@ -214,14 +230,14 @@
                 <div class="flex justify-center lg:justify-start  gap-5">
                     <div class="flex flex-col justify-center items-center">
                       <span class="countdown font-lato text-5xl text-secondary-color font-extrabold">
-                        <span class="pr-2 lg:pr-4" style="--value:15;"></span>
+                        <span class="pr-2 lg:pr-4" style="--value:29;"></span>
                         :
                       </span>
                       <p class="text-font-color-description text-lg -ml-4 lg:-ml-5">days</p>
                     </div> 
                     <div  class="flex flex-col justify-center items-center">
                       <span class="countdown font-lato text-5xl text-secondary-color font-extrabold">
-                        <span class="pr-2 lg:pr-4" style="--value:10;"></span>
+                        <span class="pr-2 lg:pr-4" style="--value:15;"></span>
                         :
                       </span>
                       <p class="text-font-color-description text-lg -ml-4 lg:-ml-5">hours</p>
@@ -229,14 +245,14 @@
                     </div> 
                     <div  class="flex flex-col justify-center items-center">
                       <span class="countdown font-lato text-5xl text-secondary-color font-extrabold">
-                        <span class="pr-2 lg:pr-4" style="--value:24;"></span>
+                        <span class="pr-2 lg:pr-4" style="--value:25;"></span>
                         :
                       </span>
                       <p class="text-font-color-description text-lg -ml-4 lg:-ml-5">min</p>   
                     </div> 
                     <div  class="flex flex-col justify-center items-center">
                       <span class="countdown font-lato text-5xl text-secondary-color font-extrabold">
-                        <span class="pr-2 lg:pr-4" style="--value:7;"></span>
+                        <span class="pr-2 lg:pr-4" style="--value:08;"></span>
                       </span>
                       <p class="text-font-color-description text-lg -ml-3 lg:-ml-5">sec</p>
                     </div>
@@ -287,7 +303,7 @@
                             </div>
                             <div class=" flex flex-row justify-center modal-action">
                             <!-- if there is a button in form, it will close the modal -->
-                              <button class="btn btn-outline btn-primary-color  hover:bg-red-600 hover:text-white">Close</button>
+                              <button class="btn btn-outline text-primary-color hover:bg-red-600 hover:text-white">Close</button>
                               <button class="btn bg-primary-color border-0 text-white hover:bg-red-700">Shop Now</button>
                             </div>
                         </form>
@@ -337,7 +353,7 @@
                             </div>
                             <div class=" flex flex-row justify-center modal-action">
                             <!-- if there is a button in form, it will close the modal -->
-                              <button class="btn btn-outline btn-primary-color  hover:bg-red-600 hover:text-white">Close</button>
+                              <button class="btn btn-outline text-primary-color  hover:bg-red-600 hover:text-white">Close</button>
                               <button class="btn bg-primary-color border-0 text-white hover:bg-red-700">Shop Now</button>
                             </div>
                         </form>
@@ -387,7 +403,7 @@
                             </div>
                             <div class=" flex flex-row justify-center modal-action">
                             <!-- if there is a button in form, it will close the modal -->
-                              <button class="btn btn-outline btn-primary-color  hover:bg-red-600 hover:text-white">Close</button>
+                              <button class="btn btn-outline text-primary-color  hover:bg-red-600 hover:text-white">Close</button>
                               <button class="btn bg-primary-color border-0 text-white hover:bg-red-700">Shop Now</button>
                             </div>
                         </form>
@@ -436,7 +452,7 @@
                         </div>
                         <div class=" flex flex-row justify-center modal-action">
                         <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn btn-outline btn-primary-color  hover:bg-red-600 hover:text-white">Close</button>
+                            <button class="btn btn-outline text-primary-color  hover:bg-red-600 hover:text-white">Close</button>
                             <button class="btn bg-primary-color border-0 text-white hover:bg-red-700">Shop Now</button>
                         </div>
                     </form>
@@ -508,9 +524,80 @@
       
         
       <!-- Why Choose us -->
-      <section></section>
+      <section>
+        <div class="my-10 ">
+          <h3 class="text-center text-5xl text-secondary-color font-extrabold py-4">Why Choose Us</h3>
+          <p class="w-auto lg:w-1/2 mx-auto text-center text-font-color-description pb-5 px-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 px-8 lg:px-0">
+          <div class="flex flex-col-reverse lg:flex-row w-auto lg:w-3/4 justify-center items-center gap-5">
+            <div class="flex flex-col gap-5">
+              <!-- item-1 -->
+              <div class="flex flex-col items-center text-center lg:text-left lg:flex-row gap-5">
+                <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-user-group text-secondary-color text-xl"></i></div>
+                <div class="flex flex-col items-center lg:items-start gap-3">
+                  <h6 class="text-secondary-color font-bold">Dedicated Team</h6>
+                  <hr class="w-32 border-1 border-black">
+                  <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                </div>
+              </div>
+              <!-- item-2 -->
+              <div class="flex flex-col items-center text-center lg:text-left lg:flex-row gap-5">
+                <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-heart-circle-check text-secondary-color text-xl"></i></div>
+                <div class="flex flex-col items-center lg:items-start gap-3">
+                  <h6 class="text-secondary-color font-bold">Fresh is Best</h6>
+                  <hr class="w-32 border-1 border-black">
+                  <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                </div>
+              </div>
+              <!-- item-3 -->
+              <div class="flex flex-col items-center text-center lg:text-left lg:flex-row gap-5">
+                <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-gift text-secondary-color text-xl"></i></div>
+                <div class="flex flex-col items-center lg:items-start gap-3">
+                  <h6 class="text-secondary-color font-bold">Gift Certificates</h6>
+                  <hr class="w-32 border-1 border-black">
+                  <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pl-1 lg:pl-4">
+              <img src="./images/whychoose1.png" alt="">
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <!-- item-4 -->
+            <div class="flex flex-col lg:flex-row-reverse items-center lg:justify-end text-center lg:text-right gap-5">
+              <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-seedling text-secondary-color text-xl"></i></div>
+              <div class="flex flex-col items-center lg:items-end gap-3">
+                <h6 class="text-secondary-color font-bold">Integrated Supplier</h6>
+                <hr class="w-32 border-1 border-black">
+                <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              </div>
+            </div>
+            <!-- item-5 -->
+            <div class="flex flex-col lg:flex-row-reverse items-center lg:justify-end text-center lg:text-right gap-5">
+              <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-ice-cream text-secondary-color text-xl"></i></div>
+              <div class="flex flex-col items-center lg:items-end gap-3">
+                <h6 class="text-secondary-color font-bold">Sustainable Practice</h6>
+                <hr class="w-32 border-1 border-black">
+                <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              </div>
+            </div>
+            <!-- item-6 -->
+            <div class="flex flex-col lg:flex-row-reverse items-center lg:justify-end text-center lg:text-right gap-5">
+              <div class="bg-gray-300 rounded-full p-5"><i class="fa-solid fa-thumbs-up text-secondary-color text-xl"></i></div>
+              <div class="flex flex-col items-center lg:items-end gap-3">
+                <h6 class="text-secondary-color font-bold">The Benefits Only</h6>
+                <hr class="w-32 border-1 border-black">
+                <p class="text-font-color-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer footer-center p-10 bg-black text-base-content rounded text-white">
+    <footer class="mt-8 lg:mt-28 footer footer-center p-10 bg-black text-base-content rounded text-white">
       <div class="flex flex-row justify-center items-center">
         <img src="./images/logo.png" alt="">
         <p class="text-2xl font-bold text-white">Fruit Burst</p>
